@@ -1,2 +1,2 @@
-# sumar
-Sumar v 2.0
+# Sumar La Rioja
+Sumar v2.0 es la nueva versió en desarrollo por el equipo de desarrollo de la Pcia de La Rioja
