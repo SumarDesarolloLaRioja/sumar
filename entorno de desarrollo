@@ -1,0 +1,37 @@
+Instalacion del entorno de desarrollo de Sumar 2.0 en windows
+
+1) Instalar virtual box, para ello ir a https://www.virtualbox.org/. Descargar e instalar siguiendo los pasos del asistente.
+
+2) Instalar git, para ello ir a https://git-scm.com/. Descargar e instalar siguiendo los pasos del asistente.
+
+3) Instalar Visual Studio Code, para ello ir a https://code.visualstudio.com/. Descargar e instalar siguiendo los pasos del asistente.
+
+4) Instalar Vagrant, para ello ir a https://www.vagrantup.com/. Descargar e instalar siguiendo los pasos del asistente.
+
+5) Para comprobar que vagran esta bien instalado desde la aplicacion Git Bash poner "vagrant --version" y debe mostrar la versión instalada.
+
+6) Añadir el box de laravel para vagrant. este contiene todo lo necesario (PHP,PostgreSQL,Mysql,etc), para ello usamos 
+   el siguiente comando "vagrant box add laravel/homestead"
+
+7) Instalamos el Homestead usamos "git clone https://github.com/laravel/homestead.git ~/Sumar/Homestead"
+   cuando termine entramos al directorio con "cd ~/Sumar/Homestead" y ponemos "git checkout release"
+
+8) Se crea el archivo de configuración de la maquina virutal para ello usamos "bash init.sh"
+
+9) Ahora creamos una claves publicas/privadas usando "ssh-keygen -t rsa -C your@homestead" nos pregunta hara una pregunta damos enter
+
+10) Configurar el archivo Homestead.yaml las carpetas. La opción "map" es la carpeta en  tu pc host, es decir en windows "d:/sumar/sumar"
+    La opción "to" hace referencia a la carpeta en la maquina virtual "/home/vagrant/sumar"
+
+11) En las opciones de Sites tenemos "map" que es url que usaremos para entrar en el navegador en nuestro sistema. En este caso usaremos "sumar.test"
+    y en la opción "to" "/home/vagrant/sumar/public"
+
+12) Cambiar el archivo host de windows se edita con editor de texto en modo admistrador y poner "192.168.10.10 sumar.test"
+
+13) Ahora arrancamos la maquina virtual con la sentencia "vagrant up"
+
+14) ingresamos a la maquina virtual con la sentencia "vagrant ssh"
+
+15) instalamos laravel con "composer global require laravel/installer"
+
+16) Creamos un nuevo proyecto con "laravel new sumar"
