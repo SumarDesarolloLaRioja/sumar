@@ -34,4 +34,6 @@ Instalacion del entorno de desarrollo de Sumar 2.0 en windows
 
 15) instalamos laravel con "composer global require laravel/installer"
 
-16) Creamos un nuevo proyecto con "laravel new sumar"
+16) a) Creamos un nuevo proyecto con "laravel new sumar"  sino debemos crear el proyecto por primera vez
+
+    b) Si ya existe el repositorio entramos a la carpeta sumar clonamos el proyecto con "git clone https://github.com/SumarDesarolloLaRioja/sumar.git"
